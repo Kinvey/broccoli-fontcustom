@@ -21,7 +21,7 @@ $ gem install fontcustom
 
 Add broccoli-fontcustom to your project
 ```
-npm install broccoli-fontcustom
+npm install --save-dev broccoli-fontcustom
 ```
 
 ## Usage
