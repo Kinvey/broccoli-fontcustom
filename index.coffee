@@ -22,18 +22,21 @@ class BuildFont
         else
           @options.output = @tmpDestDir
 
-        output = ""
-
         commands = ['compile', dir]
         for key, option of @options
           commands.push('--'+key)
           if option?
-            commands.push(option)
+            if option instanceof Array
+              for subCommand in option
+                commands.push subCommand
+            else
+              commands.push(option)
 
         fontcustom = spawn 'fontcustom', commands
 
-        fontcustom.stdout.on 'data', (data)->
-          output += "#{data}\n"
+        fontcustom.stdout.on 'data', (data)=>
+          if @options.debug == null
+            console.log ""+data
 
         fontcustom.stderr.on 'data', (data)->
           reject ""+data
@@ -42,7 +45,6 @@ class BuildFont
           if code == 0
             resolve @tmpDestDir
           else
-            console.log output
             reject "fontcustom returned a status code of #{code}"
 
   cleanup: ->

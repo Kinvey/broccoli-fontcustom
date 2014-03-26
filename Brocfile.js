@@ -4,7 +4,9 @@ module.exports = function (broccoli) {
   fontIcons = fontCustom(fontIcons, {
     output: 'fonts',
     'font-name': 'Icons',
-    'no-hash': null
+    'no-hash': null,
+    debug: null,
+    templates: ['css','preview']
   });
   return [fontIcons]
 };
