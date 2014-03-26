@@ -4,13 +4,14 @@ Generate custom svg based webfonts using Font Custom and Broccoli
 
 ## Installation
 
-1. Install Font Custom on your system
-  * On a mac:
-```
-  brew install fontforge ttfautohint
-  gem install fontcustom
-```
-  * On Linux:
+Install Font Custom on your system
+### On a mac:
+    ```
+      brew install fontforge ttfautohint
+      gem install fontcustom
+    ```
+
+### On Linux:
 ```
 sudo apt-get install fontforge ttfautohint
 wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
@@ -18,17 +19,17 @@ unzip woff-code-latest.zip -d sfnt2woff && cd sfnt2woff && make && sudo mv sfnt2
 gem install fontcustom
 ```
 
-2. Add broccoli-fontcustom to your project
+Add broccoli-fontcustom to your project
 ```
 npm install broccoli-fontcustom
 ```
 
-3. Add broccoloi-fontcustom to your Brocfile.js
+Add broccoloi-fontcustom to your Brocfile.js
 ```javascript
 var fontCustom = require('broccoli-fontcustom');
 ```
 
-4. Configure broccoli-fontcustom with the second configuration being any command line arguments to fontcustom (minus the `--` before them) if there is no parameter to the argument specify null
+Configure broccoli-fontcustom with the second configuration being any command line arguments to fontcustom (minus the `--` before them) if there is no parameter to the argument specify null
 ```javascript
 // 'test/icons' is relative to your current working directory
 var fontIcons = broccoli.makeTree('test/icons');
