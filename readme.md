@@ -24,6 +24,8 @@ Add broccoli-fontcustom to your project
 npm install broccoli-fontcustom
 ```
 
+## Usage
+
 Add broccoloi-fontcustom to your Brocfile.js
 ```javascript
 var fontCustom = require('broccoli-fontcustom');
