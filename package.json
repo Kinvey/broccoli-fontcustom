@@ -1,0 +1,30 @@
+{
+  "name": "broccoli-fontcustom",
+  "version": "0.0.0",
+  "description": "Build an svg font dynamically using fontcustom and broccoli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kinvey/brooccoli-fontcustom.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rm -rf ./test/actual && ./node_modules/.bin/broccoli build test/actual",
+    "test": "./node_modules/.bin/mocha",
+    "posttest": "rm -r ./test/actual"
+  },
+  "keywords": [
+    "broccoli",
+    "fontcustom"
+  ],
+  "author": "Ryan Kahn",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-transform": "^0.1.1",
+    "broccoli-kitchen-sink-helpers": "^0.1.0",
+    "coffee-script": "^1.7.1"
+  },
+  "devDependencies":{
+    "broccoli-cli": "0.0.1",
+    "mocha": "~1.18"
+  }
+}
