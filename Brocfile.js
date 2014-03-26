@@ -1,13 +1,10 @@
 module.exports = function (broccoli) {
-  var fontCustom = require('broccoli-fontcustom')
-
-  var fontIcons = broccoli.makeTree('test')
+  var fontCustom = require('broccoli-fontcustom');
+  var fontIcons = broccoli.makeTree('test/icons');
   fontIcons = fontCustom(fontIcons, {
-    inputFiles: [
-      'icons/*.svg'
-    ],
-    outputFile: 'fonts/Icons'
-  })
-
+    output: 'fonts',
+    'font-name': 'Icons',
+    'no-hash': null
+  });
   return [fontIcons]
-}
+};

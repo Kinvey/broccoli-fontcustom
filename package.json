@@ -21,9 +21,11 @@
   "dependencies": {
     "broccoli-transform": "^0.1.1",
     "broccoli-kitchen-sink-helpers": "^0.1.0",
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.7.1",
+    "rsvp": "^3.0.6",
+    "quick-temp": "^0.1.0"
   },
-  "devDependencies":{
+  "devDependencies": {
     "broccoli-cli": "0.0.1",
     "mocha": "~1.18"
   }
