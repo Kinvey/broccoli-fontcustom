@@ -7,16 +7,16 @@ Generate custom svg based webfonts using Font Custom and Broccoli
 Install Font Custom on your system
 #### On a Mac:
 ```
-brew install fontforge ttfautohint
-gem install fontcustom
+$ brew install fontforge ttfautohint
+$ gem install fontcustom
 ```
 
 #### On Linux:
 ```
-sudo apt-get install fontforge ttfautohint
-wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
-unzip woff-code-latest.zip -d sfnt2woff && cd sfnt2woff && make && sudo mv sfnt2woff /usr/local/bin/
-gem install fontcustom
+$ sudo apt-get install fontforge ttfautohint
+$ wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
+$ unzip woff-code-latest.zip -d sfnt2woff && cd sfnt2woff && make && sudo mv sfnt2woff /usr/local/bin/
+$ gem install fontcustom
 ```
 
 Add broccoli-fontcustom to your project
