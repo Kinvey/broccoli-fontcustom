@@ -1,6 +1,6 @@
 # Broccoli Font Custom
 
-Generate custom icon webfonts using Font Custom and Broccoli
+Generate custom svg based webfonts using Font Custom and Broccoli
 
 ## Installation
 
@@ -21,7 +21,7 @@ Generate custom icon webfonts using Font Custom and Broccoli
   * `var fontCustom = require('broccoli-fontcustom');`
 
 4. Configure broccoli-fontcustom with the second configuration being any command line arguments to fontcustom (minus the `--` before them) if there is no parameter to the argument specify null
-  * ```
+```javascript
 // 'test/icons' is relative to your current working directory
 var fontIcons = broccoli.makeTree('test/icons');
 fontIcons = fontCustom(fontIcons, {
