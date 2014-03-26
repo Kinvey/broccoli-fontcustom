@@ -7,6 +7,9 @@ class BuildFont
   constructor: (inputTree, options)->
     @inputTree = inputTree
     @options = options
+    @options ?= {}
+    @options.output ?= ''
+
 
   read: (readTree)->
     quickTemp.makeOrRemake(this, 'tmpDestDir')
@@ -16,10 +19,9 @@ class BuildFont
       return new RSVP.Promise (resolve, reject)=>
         dir = path.resolve(dir)
 
+        output =  @tmpDestDir
         if @options.output
-          @options.output = path.join(@tmpDestDir, @options.output)
-        else
-          @options.output = @tmpDestDir
+          output = path.join(@tmpDestDir, @options.output)
 
         commands = ['compile', dir]
         for key, option of @options
@@ -29,6 +31,8 @@ class BuildFont
               for subCommand in option
                 commands.push subCommand
             else
+              if key == 'output'
+                option = output
               commands.push(option)
 
         fontcustom = spawn 'fontcustom', commands
