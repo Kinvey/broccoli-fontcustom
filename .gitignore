@@ -3,3 +3,4 @@ test/actual
 .idea
 .DS_Store
 .fontcustom-manifest.json
+*.log
