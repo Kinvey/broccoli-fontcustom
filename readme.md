@@ -5,10 +5,10 @@ Generate custom svg based webfonts using Font Custom and Broccoli
 ## Installation
 
 Install Font Custom on your system
-#### On a mac:
+#### On a Mac:
 ```
-  brew install fontforge ttfautohint
-  gem install fontcustom
+brew install fontforge ttfautohint
+gem install fontcustom
 ```
 
 #### On Linux:
@@ -50,3 +50,7 @@ fontIcons = fontCustom(fontIcons, {
   debug: null
 });
 ```
+
+
+## License
+MIT - 2014 Kinvey, Inc.
