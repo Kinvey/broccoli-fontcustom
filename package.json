@@ -1,6 +1,6 @@
 {
   "name": "broccoli-fontcustom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Build an svg font dynamically using fontcustom and broccoli",
   "repository": {
     "type": "git",
