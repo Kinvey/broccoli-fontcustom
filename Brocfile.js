@@ -1,5 +1,5 @@
 module.exports = function (broccoli) {
-  var fontCustom = require('broccoli-fontcustom');
+  var fontCustom = require('./index.js');
   var fontIcons = broccoli.makeTree('test/icons');
   fontIcons = fontCustom(fontIcons, {
     output: 'fonts',

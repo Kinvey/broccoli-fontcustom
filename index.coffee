@@ -1,4 +1,3 @@
-helpers = require("broccoli-kitchen-sink-helpers")
 spawn = require('child_process').spawn
 path = require('path')
 RSVP = require('rsvp')

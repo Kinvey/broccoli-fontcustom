@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "broccoli-cli": "0.0.1",
-    "mocha": "~1.18"
+    "mocha": "~1.18",
+    "broccoli": "^0.4.2"
   }
 }
