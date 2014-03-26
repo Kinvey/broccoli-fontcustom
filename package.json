@@ -4,7 +4,7 @@
   "description": "Build an svg font dynamically using fontcustom and broccoli",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Kinvey/brooccoli-fontcustom.git"
+    "url": "git@github.com:Kinvey/broccoli-fontcustom.git"
   },
   "main": "index.js",
   "scripts": {
