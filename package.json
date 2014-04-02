@@ -14,7 +14,8 @@
   },
   "keywords": [
     "broccoli",
-    "fontcustom"
+    "fontcustom",
+    "broccoli-plugin"
   ],
   "author": "Ryan Kahn",
   "license": "MIT",
