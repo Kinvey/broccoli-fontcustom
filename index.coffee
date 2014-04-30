@@ -2,6 +2,7 @@ spawn = require('child_process').spawn
 path = require('path')
 RSVP = require('rsvp')
 quickTemp = require('quick-temp')
+helpers = require 'broccoli-kitchen-sink-helpers'
 
 class BuildFont
   constructor: (inputTree, options)->
@@ -9,9 +10,16 @@ class BuildFont
     @options = options
     @options ?= {}
     @options.output ?= ''
+    @cachedHash = null
 
 
   read: (readTree)->
+    hash = helpers.hashTree(@inputTree)
+    if hash == @cachedHash and @tmpDestDir?
+      return new RSVP.Promise (resolve, reject)=>
+        resolve @tmpDestDir
+
+    @cachedHash = hash
     quickTemp.makeOrRemake(this, 'tmpDestDir')
 
     readTree(@inputTree)
