@@ -3,6 +3,7 @@ path = require('path')
 RSVP = require('rsvp')
 quickTemp = require('quick-temp')
 helpers = require 'broccoli-kitchen-sink-helpers'
+path = require 'path'
 
 class BuildFont
   constructor: (inputTree, options)->
@@ -24,6 +25,11 @@ class BuildFont
 
     readTree(@inputTree)
     .then (dir)=>
+
+      if @options.templates
+        for template, idx in @options.templates
+          @options.templates[idx] = path.relative(@tmpDestDir, template)
+
       return new RSVP.Promise (resolve, reject)=>
         dir = path.resolve(dir)
 

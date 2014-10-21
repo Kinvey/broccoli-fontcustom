@@ -20,14 +20,14 @@
   "author": "Ryan Kahn",
   "license": "MIT",
   "dependencies": {
+    "broccoli-kitchen-sink-helpers": "^0.2.5",
     "coffee-script": "^1.7.1",
-    "rsvp": "^3.0.6",
     "quick-temp": "^0.1.0",
-    "broccoli-kitchen-sink-helpers": "^0.2.2"
+    "rsvp": "^3.0.6"
   },
   "devDependencies": {
     "broccoli-cli": "0.0.1",
     "mocha": "~1.18",
-    "broccoli": "^0.4.2"
+    "broccoli": "^0.13.2"
   }
 }
