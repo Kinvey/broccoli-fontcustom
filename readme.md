@@ -41,11 +41,11 @@ fontIcons = fontCustom(fontIcons, {
   // Name the font file
   'font-name': 'Icons',
   // Disable the md5 hash being added to the end of the filenames
-  'no-hash': null
+  'no-hash': null,
   // Whatever templates you would like to use, by default it will generate `preview` and `css` templates
-  templates: ['css','preview']
+  templates: ['css','preview'],
   // The prefix for each glyph's CSS class. Default: icon-
-  'css-prefix': 'icon'
+  'css-prefix': 'icon',
   // Display debug information
   debug: null
 });
