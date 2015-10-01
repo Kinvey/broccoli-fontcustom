@@ -25,6 +25,7 @@
   "dependencies": {
     "broccoli-kitchen-sink-helpers": "^0.2.5",
     "coffee-script": "^1.7.1",
+    "cross-spawn": "^2.0.0",
     "quick-temp": "^0.1.0",
     "rsvp": "^3.0.6"
   },

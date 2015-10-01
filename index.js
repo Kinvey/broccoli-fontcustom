@@ -1,4 +1,4 @@
-var spawn = require('child_process').spawn;
+var spawn = require('cross-spawn');
 var path = require('path');
 var RSVP = require('rsvp');
 var quickTemp = require('quick-temp');
@@ -45,7 +45,7 @@ BuildFont.prototype.read = function(readTree) {
       } else {
         output = path.join(self.tmpDestDir, self.options.output || '');
       }
-      
+
       commands = ['compile', dir];
 
       // Remove once https://github.com/FontCustom/fontcustom/pull/247 is fixed
