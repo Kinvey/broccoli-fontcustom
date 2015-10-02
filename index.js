@@ -46,7 +46,8 @@ BuildFont.prototype.read = function(readTree) {
         output = path.join(self.tmpDestDir, self.options.output || '');
       }
 
-      commands = ['compile', dir];
+      //Replace \\ with / which ruby accepts in windows
+      commands = ['compile', dir.replace(/\\/g, '/')];
 
       // Remove once https://github.com/FontCustom/fontcustom/pull/247 is fixed
       if (self.options.templates) {
